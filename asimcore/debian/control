@@ -1,0 +1,40 @@
+Source: asim-core
+Priority: optional
+Maintainer:  Asim/Awb Software Releases <releases@asim.csail.mit.edu>
+Build-Depends: debhelper (>= 7), autotools-dev
+Standards-Version: 3.8.1
+Section: libs
+Homepage: http://asim.csail.mit.edu
+
+Package: asim-core-dev
+Section: libdevel
+Architecture: any
+Depends: asim-core (= ${binary:Version})
+Description: Asim core libraries
+ Asim core libraries
+
+Package: asim-core
+Section: libs
+Architecture: all
+Depends: ${misc:Depends}, asim-core-15.02
+Recommends: asim-core-14.08
+Description: Dependency package for asim core libraries
+ Dependency package for asim core libraries
+
+
+Package: asim-core-15.02
+Section: libs
+Architecture: any
+Depends: ${misc:Depends}, asim-core-bin
+Description: Sharable public package for Asim core libraries
+ Sharable public package for Asim core libraries
+
+
+Package: asim-core-bin
+Section: libs
+Architecture: any
+Depends: ${misc:Depends}, awb
+Replaces: asim-core (<= 0.6.0)
+Breaks: asim-core (<= 0.6.0)
+Description: Asim core library binaries
+ Asim core library binaries

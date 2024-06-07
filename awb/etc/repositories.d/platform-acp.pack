@@ -1,0 +1,21 @@
+##############################################################################
+# Asim packages
+#
+##############################################################################
+
+
+###### Platform-ACP trunk
+
+[leap-platforms-acp]
+Description=Leap Platform modules for ACP board
+Method=git
+Access=https://github.com/LEAP-Core/leap-platforms-acp
+Module=undef
+Tag=HEAD
+Target=leap-platforms-acp
+BrowseURL=https://github.com/LEAP-Core/leap-platforms-acp
+
+[leap-platforms-acp/HEAD]
+Description=Leap Platform modules for ACP board (HEAD)
+Access=https://github.com/LEAP-Core/leap-platforms-acp
+Tag=HEAD

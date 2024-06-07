@@ -1,0 +1,21 @@
+##############################################################################
+# Asim packages
+#
+##############################################################################
+
+
+###### Platform-USRP trunk
+
+[leap-platforms-usrp]
+Description=Leap Platform modules for USRP board
+Method=git
+Access=https://github.com/LEAP-Core/leap-platforms-usrp
+Module=undef
+Tag=HEAD
+Target=leap-platforms-usrp
+BrowseURL=https://github.com/LEAP-Core/leap-platforms-usrp
+
+[leap-platforms-usrp/HEAD]
+Description=Leap Platform modules for USRP board (HEAD)
+Access=https://github.com/LEAP-Core/leap-platforms-usrp
+Tag=HEAD

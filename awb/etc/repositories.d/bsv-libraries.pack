@@ -1,0 +1,15 @@
+###### bsv-libraries
+
+[bsv-libraries]
+Description=General Bluespec Libraries
+Method=git
+Access=https://github.com/LEAP-Workloads/bsv-libraries
+Module=undefined
+Tag=HEAD
+Target=bsv-libraries
+BrowseURL=https://github.com/LEAP-Workloads/bsv-libraries
+
+[bsv-libraries/HEAD]
+Description=General Bluespec Libraries
+Access=https://github.com/LEAP-Workloads/bsv-libraries
+Tag=HEAD

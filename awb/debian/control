@@ -1,0 +1,36 @@
+Source: awb
+Section: devel
+Priority: optional
+Maintainer: Joel Emer <emer@csail.mit.edu>
+Build-Depends: debhelper (>= 7), gcc, g++, autotools-dev, libqt4-dev, libpopt-dev
+Standards-Version: 3.8.4
+
+Package: awb
+Architecture: all
+Depends: awb-15.02
+Recommends: awb-14.08
+Description: Dependency package for the Architect's Workbench
+ Dependency package for the Architect's Workbench package (awb)
+Section: devel
+
+Package: awb-15.02
+Architecture: any
+Depends: awb-bin, ${misc:Depends}
+Description: Sharable package for the Architect's Workbench
+ Sharable files making up the Architect's Workbench package
+Section: devel
+
+Package: awb-bin
+Architecture: any
+Depends: gcc, g++, ${perlqt:Depends}, libenum-perl, libqt4-dev, libpopt-dev, scons, cvs, subversion, git-core, libterm-readline-gnu-perl, libenum-perl, ${misc:Depends}
+Replaces: awb (<= 0.6.0)
+Breaks: awb (<= 0.6.0)
+Description: Executables for the Architect's Workbench
+ Core executables for Architect's Workbench (awb) plug-n-play build system.
+Section: devel
+
+Package: awb-doc
+Architecture: all
+Description: Documentation for the Architect's Workbench
+ Documenation for Architect's Workbench (awb) plug-n-play build system.
+Section: doc

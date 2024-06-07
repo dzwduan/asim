@@ -1,0 +1,115 @@
+Changes to do a release and upgrade release number 
+
+ (0) Make sure that there is a pack file for the new release.
+     This change needs to be in awb/HEAD and awb/STABLE and
+     is a little convoluted when releasing awb...
+
+ (1) Prepare HEAD for a release
+
+     a) Make sure that the following files had been updated to the correct version.
+        Note: These numbers DO NOT include a 'v' in them, e.g., 12.01.
+
+          i)   debian/changelog
+
+          ii)  debian/control
+     
+          iii) debian/rules
+
+     b) Make sure that the following file has been updated to the correct version.
+        Note: These numbers DO include a 'v' in them, e.g., v12.01.         
+ 
+         i)   admin/packages/<packagename>  (see Tag= line)
+
+     c) (Optional) Try a debian build and repository update (see instructions below)
+
+     d) Make sure the buildbots are looking for this as the testing release. 
+        Note: Buildbots may need to be restarted to see this change
+
+     e) Commit these changes with 'awb-shell commit' if changes were necessary.
+
+
+ (2) Create a new branch for release
+
+     a) Update buildbots to look for this version as the new release
+
+     b) Create a branch with:
+
+            % awb-shell branch package <packagename>
+              Enter name for branch: v12.01
+              Put branch in tags/ instead of branches [no]: no
+
+     c) Change the release name to '+fixes' in the followwing file:
+        For example, 11.04+fixes~svn20100724r382+lucid
+
+           i) debian/changelog
+
+     d) Change the 'Prerelease' flag to 0 in:
+
+           i) admin/packages/<packagename>
+
+     d) Commit these changes with 'awb-shell commit'.
+
+     e) (Optional) Try a debian build and repository update (see instructions below)
+
+
+
+ (3) Fix the trunk to prepare for the next future release
+
+     a) Change the buildbots to look for the new testing version
+
+     b) Checkout HEAD - BEWARE step (2) changed you to the branch
+
+     c) Update to the next version number as described in step (1) above
+
+     c) Commit these changes with 'awb-shell commit'.
+
+
+
+-----------------------------
+
+
+Build for debian
+
+  1) Update debian/changelog (using dch can help)
+
+     a) For HEAD, name should be <release>.<major>.<minor>~svn<date>r<version>+<release>
+        For example, 11.04~svn20100724r382+lucid
+
+        For a release, name should be <release>.<major>.<minor>+fixes~svn<date>r<version>+<release>
+        For example, 11.04+fixes~svn20100724r382+lucid
+
+     b) Change date at bottom of changelog
+
+     c) Commit these changes with 'awb-shell commit'.
+
+
+  2) Build it
+
+     a) % debuild -us -uc
+        or
+        % debuild -r sudo -us -uc
+
+  3) Copy .deb files created in ../ to system containing repository
+
+
+Install into repository for distribution
+
+  1) Make sure you are running as user with the gpg key
+
+     a) % sudo bash; su 
+             or
+        % sudo -H -i
+
+     b) Using gpg-agent is useful
+
+        % eval $(gpg-agent --daemon)
+
+
+  2) Install <package>.deb (copied above) into repository
+
+     a) % cd <repository-directory>
+        For example, /home/asim/reprepro/releases/ubuntu
+
+     b) % reprepro includedeb <release> <package>.deb
+
+

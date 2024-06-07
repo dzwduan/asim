@@ -1,0 +1,56 @@
+#
+# Copyright (C) 2003-2006 Intel Corporation
+# 
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+# 
+#
+
+[Global]
+Version=2.2
+File=controllerNativeTcl
+Name=Native TCL Controller
+Description=Classic AWB Controller (native built-in TCL)
+SaveParameters=0
+Type=Asim
+DefaultBenchmark=
+RootName=Asim classic controller base
+RootProvides=controller
+Class=Asim::Model
+DefaultRunOpts=
+
+[Model]
+DefaultAttributes=
+model=Asim classic controller base
+
+[Asim classic controller]
+File=modules/controller/classic/controller_classic_alg.awb
+Packagehint=awb
+
+[AWB Native TCL]
+File=modules/controller/classic/awb.awb
+Packagehint=awb
+
+[Simple Workbench]
+File=modules/controller/workbench/simple/simpleWb.awb
+Packagehint=awb
+
+[Asim classic controller base/Requires]
+workbench=Simple Workbench
+awb_stub=AWB Native TCL
+controller_alg=Asim classic controller
+
+[Asim classic controller base]
+File=modules/controller/classic/controller_classic.awb
+Packagehint=awb

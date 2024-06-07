@@ -1,0 +1,15 @@
+###### Openx86 trunk
+
+[openx86]
+Description=Open x86 based cpu performance model
+Method=git
+Access=https://github.com/Asim-Modeling/openx86
+Module=undefined
+Tag=HEAD
+Target=openx86
+BrowseURL=https://github.com/Asim-Modeling/openx86
+
+[openx86/HEAD]
+Description=Open x86 based cpu performance model
+Access=https://github.com/Asim-Modeling/openx86
+Tag=HEAD

@@ -1,0 +1,14 @@
+etc/asim
+etc/bash_completion.d
+usr/bin
+usr/lib
+usr/lib/perl
+usr/libexec
+usr/libexec/asim
+usr/sbin
+usr/share
+usr/share/benchmarks
+usr/share/man
+usr/share/man/man1
+usr/share/man/man3
+usr/share/perl

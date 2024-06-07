@@ -1,0 +1,213 @@
+###### Leap trunk
+
+[leap]
+Description=Leap environment
+Method=git
+Access=https://github.com/LEAP-Core/leap
+Module=undefined
+Tag=HEAD
+Target=leap
+BrowseURL=https://github.com/LEAP-Core/leap
+
+[leap/HEAD]
+Description=Leap environment HEAD
+Access=https://github.com/LEAP-Core/leap
+Tag=HEAD
+
+[leap/v11.03]
+Description=Leap environment v11.03
+Access=https://github.com/LEAP-Core/leap
+Tag=v11.03
+
+[leap/v11.04]
+Description=Leap environment v11.04
+Access=https://github.com/LEAP-Core/leap
+Tag=v11.04
+
+[leap/v11.09]
+Description=Leap environment v11.09
+Access=https://github.com/LEAP-Core/leap
+Tag=v11.09
+
+[leap/v12.04]
+Description=Leap environment v12.04
+Access=https://github.com/LEAP-Core/leap
+Tag=v12.04
+
+[leap/v13.06]
+Description=Leap environment v13.06
+Access=https://github.com/LEAP-Core/leap
+Tag=v13.06
+
+[leap/v14.08]
+Description=Leap environment v14.08
+Access=https://github.com/LEAP-Core/leap
+Tag=v14.08
+
+[leap/v15.02]
+Description=Leap environment v15.02
+Access=https://github.com/LEAP-Core/leap
+Tag=v15.02
+
+###### Leap debug trunk
+
+[leap-debug]
+Description=Leap debugging environment
+Method=git
+Access=https://github.com/LEAP-Core/leap-debug
+Module=undefined
+Tag=HEAD
+Target=leap-debug
+BrowseURL=https://github.com/LEAP-Core/leap-debug
+
+[leap-debug/HEAD]
+Description=Leap debugging environment
+Access=https://github.com/LEAP-Core/leap-debug
+Tag=HEAD
+
+###### Leap examples trunk
+
+[leap-examples]
+Description=Leap examples
+Method=git
+Access=https://github.com/LEAP-Core/leap-examples
+Module=undefined
+Tag=HEAD
+Target=leap-examples
+BrowseURL=https://github.com/LEAP-Core/leap-examples
+
+[leap-examples/HEAD]
+Description=Leap examples
+Access=https://github.com/LEAP-Core/leap-examples
+Tag=HEAD
+
+###### Leap documentation trunk
+
+[leap-documentation]
+Description=Leap documentation
+Method=git
+Access=https://github.com/LEAP-FPGA/leap-documentation
+Module=undefined
+Tag=HEAD
+Target=leap-documentation
+BrowseURL=https://github.com/LEAP-FPGA/leap-documentation
+
+[leap-documentation/HEAD]
+Description=Leap documentation
+Access=https://github.com/LEAP-FPGA/leap-documentation
+Tag=HEAD
+
+###### Leap papers trunk
+
+[leap-papers]
+Description=Leap papers
+Method=git
+Access=git@github.mit.edu:LEAP/leap-papers
+Module=undefined
+Tag=HEAD
+Target=leap-papers
+BrowseURL=https://github.mit.edu/LEAP/leap-papers
+
+[leap-papers/HEAD]
+Description=Leap papers
+Access=git@github.mit.edu:LEAP/leap-papers
+Tag=HEAD
+
+###### Leap platforms trunk
+
+[leap-platforms]
+Description=Leap FPGA Platforms
+Method=git
+Access=https://github.com/LEAP-Core/leap-platforms
+Module=undefined
+Tag=HEAD
+Target=leap-platforms
+BrowseURL=https://github.com/LEAP-Core/leap-platforms
+
+[leap-platforms/HEAD]
+Description=Leap FPGA Platforms HEAD
+Access=https://github.com/LEAP-Core/leap-platforms
+Tag=HEAD
+
+[leap-platforms/v11.03]
+Description=Leap FPGA Platforms v11.03
+Access=https://github.com/LEAP-Core/leap-platforms
+Tag=v11.03
+
+[leap-platforms/v11.04]
+Description=Leap FPGA Platforms v11.04
+Access=https://github.com/LEAP-Core/leap-platforms
+Tag=v11.04
+
+[leap-platforms/v11.09]
+Description=Leap FPGA Platforms v11.09
+Access=https://github.com/LEAP-Core/leap-platforms
+Tag=v11.09
+
+[leap-platforms/v12.04]
+Description=Leap FPGA Platforms v12.04
+Access=https://github.com/LEAP-Core/leap-platforms
+Tag=v12.04
+
+[leap-platforms/v13.06]
+Description=Leap FPGA Platforms v13.06
+Access=https://github.com/LEAP-Core/leap-platforms
+Tag=v13.06
+
+[leap-platforms/v14.08]
+Description=Leap FPGA Platforms v14.08
+Access=https://github.com/LEAP-Core/leap-platforms
+Tag=v14.08
+
+[leap-platforms/v15.02]
+Description=Leap FPGA Platforms v15.02
+Access=https://github.com/LEAP-Core/leap-platforms
+Tag=v15.02
+
+###### Leap workloads trunk
+
+[leap-workloads]
+Description=Leap workloads
+Method=git
+Access=https://github.com/LEAP-Workloads/workloads
+Module=undefined
+Tag=HEAD
+Target=leap-workloads
+BrowseURL=https://github.com/LEAP-Workloads/workloads
+
+[leap-workloads/HEAD]
+Description=Leap workloads
+Access=https://github.com/LEAP-Workloads/workloads
+Tag=HEAD
+
+###### LEAP Altera libraries
+
+[leap-platforms-altera]
+Description=Leap Platforms Altera
+Method=git
+Access=https://github.com/LEAP-Core/leap-platforms-altera
+Module=undefined
+Tag=HEAD
+Target=leap-platforms-altera
+BrowseURL=https://github.com/LEAP-Core/leap-platforms-altera
+
+[leap-platforms-altera/HEAD]
+Description=Leap Platforms Altera
+Access=https://github.com/LEAP-Core/leap-platforms-altera
+Tag=HEAD
+
+###### LEAP Intel platform libraries
+
+[leap-platforms-intel]
+Description=Leap Platforms Intel
+Method=git
+Access=https://github.com/LEAP-Core/leap-platforms-intel
+Module=undefined
+Tag=HEAD
+Target=leap-platforms-intel
+BrowseURL=https://github.com/LEAP-Core/leap-platforms-intel
+
+[leap-platforms-intel/HEAD]
+Description=Leap Platforms Intel
+Access=https://github.com/LEAP-Core/leap-platforms-intel
+Tag=HEAD

@@ -1,0 +1,21 @@
+##############################################################################
+# Asim packages
+#
+##############################################################################
+
+
+###### H264 trunk
+
+[h264]
+Description=H264 Decoder
+Method=git
+Access=https://github.com/LEAP-Workloads/h264
+Module=undefined
+Tag=HEAD
+Target=h264
+BrowseURL=https://github.com/LEAP-Workloads/h264
+
+[h264/HEAD]
+Description=H264 Decoder HEAD
+Access=https://github.com/LEAP-Workloads/h264
+Tag=HEAD

@@ -1,0 +1,130 @@
+
+AWB quickstart...
+
+AWB suports the notion of "packages" that contain the source for
+either utilities or projects. For example, to use asim one must install 
+at least this awb package (the one that contains this file) in either a 
+system-wide place (like /usr/local or /proj/asim) or a private spot 
+(like ~/asim). Shell scripts, binaries and other shared files are placed
+there. After awb is installed the "awb-shell" program can
+be used to access the other asim packages from their repositories.
+The other packages can then be used privately by the person that checked
+them out or installed in the same place as core was installed and shared
+by all the users with access to them.
+
+
+Prerequisites
+-------------
+
+   To run the awb tools you need:
+
+        perl 5.6.0 or later with the following packages:
+            Term:ReadLine::Gnu (optional)
+
+        qt 3.0 or later for some gui tools
+            (configure with --enable-gui=no to avoid building these tools)
+
+        TODO: configuration instructions...
+
+
+   To actually build and run models you also need:
+
+        gcc-3.01 or later
+        scons
+
+
+
+System Installation
+-------------------
+
+   1) Unpack awb-<release>.tar.gz (the tarball containing this file)
+
+
+   2) Pick a directory, which we'll call <AWBSYSTEM> to install asim - 
+      something like /proj/awb or /usr/local or for a single user ~/awb.
+
+
+   3) Do the following:
+
+      % cd awb
+      % ./configure --prefix=<AWBSYSTEM> [--enable-gui=no]
+      % make 
+      % make install
+      % make install-src
+
+      
+   4) Install asim model sources from other tarballs as needed, e.g., 
+
+      asim-feeder-<release>.tar.gz     - instruction feeders
+      asim-ipf-<release>.tar.gz        - ipf machine models
+      asim-nework-<release>.tar.gz     - intra-cpu network models
+      
+
+
+User Startup
+------------
+   NOTE: The following instructions use examples with packages
+         that are not universally available.
+
+   0) Make sure <AWBSYSTEM> from above is in your path
+
+   1) Create a workspace with
+
+       % awb-shell new workspace ~/awb-dev
+
+   2a) Add a shared model package to your work space
+
+       % awb-shell add public_package
+       [1] core/HEAD
+       [2] core/core-V1_2
+       [3] feeder/HEAD
+       [4] feeder/feeder-V1_2
+       [5] ipf/HEAD
+       [6] ipf/ipf-V1_0
+       [7] network/HEAD
+       Select public package to add to path []: 5
+       Checking package dependency: feeder/HEAD
+       A package (feeder/HEAD) we depend on is not available
+       Would you like to use the global version [no]?: yes
+       Checking package dependency: core/HEAD
+
+   or 
+
+   2b) Check out a model into your workspace
+
+       % awb-shell checkout package
+       [1] core/HEAD
+       [2] core/core-V1_2
+       [3] feeder/HEAD
+       [4] feeder/feeder-V1_2
+       [5] ipf/HEAD
+       [6] ipf/ipf-V1_0
+       [7] network/HEAD
+       Pick repository []: 7
+       Repostitory user you want to do the checkout (e.g., your login name) [anonymous]:
+       ....
+       Do you want to add it [no]?: yes
+
+
+   3) Use new workspace
+
+       % awb-shell
+       awb> help
+
+       --- try playing with the existing models
+
+       awb> awb 
+
+       --- try checking out model to work on (*)
+
+       awb> checkout package asimcore
+       ......
+       awb> .... make source changes ....
+       awb> update package asimcore
+       ......
+       awb> commit package asimcore
+       ......
+
+       --- quit and do some real work
+
+       awb> exit

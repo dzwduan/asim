@@ -1,0 +1,79 @@
+###### Hasim trunk
+
+[hasim]
+Description=Hardware Asim Model
+Method=git
+Access=https://github.com/HAsim-Modeling/hasim
+Module=undefined
+Tag=HEAD
+Target=hasim
+BrowseURL=https://github.com/HAsim-Modeling/hasim
+
+[hasim/HEAD]
+Description=Hardware Asim Model
+Access=https://github.com/HAsim-Modeling/hasim
+Tag=HEAD
+
+###### Hasim-models trunk
+
+[hasim-models]
+Description=Basic hasim timing models
+Method=git
+Access=https://github.com/HAsim-Modeling/hasim-models
+Module=undef
+Tag=HEAD
+Target=hasim-models
+BrowseURL=https://github.com/HAsim-Modeling/hasim-models
+
+[hasim-models/HEAD]
+Description=Basic hasim timing models
+Access=https://github.com/HAsim-Modeling/hasim-models
+Tag=HEAD
+
+###### Hasim-alpha trunk
+
+[hasim-alpha]
+Description=Hardware Asim Model for ALPHA
+Method=git
+Access=https://github.com/HAsim-Modeling/hasim-alpha
+Module=undefined
+Tag=HEAD
+Target=hasim-alpha
+BrowseURL=https://github.com/HAsim-Modeling/hasim-alpha
+
+[hasim-alpha/HEAD]
+Description=Hardware Asim Model for ALPHA
+Access=https://github.com/HAsim-Modeling/hasim-alpha
+Tag=HEAD
+
+###### Hasim-mips trunk
+
+[hasim-mips]
+Description=Hardware Asim Model for MIPS
+Method=git
+Access=https://github.com/HAsim-Modeling/hasim-mips
+Module=undefined
+Tag=HEAD
+Target=hasim-mips
+BrowseURL=https://github.com/HAsim-Modeling/hasim-mips
+
+[hasim-mips/HEAD]
+Description=Hardware Asim Model for MIPS
+Access=https://github.com/HAsim-Modeling/hasim-mips
+Tag=HEAD
+
+###### M5 trunk
+
+[m5]
+Description=M5 model
+Method=git
+Access=https://github.com/HAsim-Modeling/m5
+Module=undefined
+Tag=HEAD
+Target=m5
+BrowseURL=https://github.com/HAsim-Modeling/m5
+
+[m5/HEAD]
+Description=M5 model
+Access=https://github.com/HAsim-Modeling/m5
+Tag=HEAD
